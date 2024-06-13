@@ -21,6 +21,21 @@
     --bg-mobile: url(./assets/images/pattern-background-mobile-light.svg);
 
 
+
+
+}
+body.escuro{
+    --bg-color: #313e51;
+    
+    --prymary-text-color: #fff;
+    --shadow: 0px 16px 40px 0px rgba(49, 62, 81, 0.14);
+
+    --bg-desktop: url(./assets/images/pattern-background-desktop-dark.svg);
+    --bg-mobile: url(./assets/images/pattern-background-mobile-dark.svg);
+    --button-bg:#3b4d66;
+    --secundary-text-color:#abc1e1;
+
+
 }
 body{
     height: 100svh;
