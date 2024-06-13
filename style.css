@@ -2,9 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+    -webkit-font-smoothing: antialiased; 
 }
 :root {
+    
     --bg-color: #f4f6fa;
+    --prymary-text-color:#313e51;
     --purple: #a729f5
     --white: #fff;
     --bg-mobile: url(./assets/images/pattern-background-mobile-light.svg);
@@ -38,21 +42,28 @@ header{
 .tema img{ 
     width: 16px;
 }
-.tema button{
+.tema button {
     height: 20px;
     width: 32px;
-    background: var(--purple);
+    background-color: purple;
     border: 0;
     border-radius: 999px;
     padding: 4px;
-
 }
 .tema button div{
-    background:var(white);
+    background-color: white;
     width: 12px;
     height: 12px;
     border-radius: 999px;
+
 }
+   
 main{
-    padding: 32px 24px;
+    padding: 32px 24px; 
+}
+
+main h1{
+    font-size: 40px;
+    font-weight: 300;
+    color: var(--prymary-text-color)
 }
