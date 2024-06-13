@@ -165,6 +165,22 @@ main{
     }
 
 }
+.alternativa label#correta {
+    outline: 3px solid #26d782; 
+    
+    & span {
+        background: #26d782;
+        color: white;
+    }
+}
+.alternativa label#errada {
+    outline: 3px solid #ee5454;;
+
+    & span {
+        background: #ee5454;;
+        color: white;
+    }
+}
 .alternativa input{
     display: none;
 }
