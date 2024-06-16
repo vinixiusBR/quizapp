@@ -8,6 +8,8 @@
 :root {
     --bg-desktop: url(../../assets/images/pattern-background-desktop-light.svg);
     --bg-color: #f4f6fa;
+    --bg-span: #f4f6fa;
+    --color-span: #626c7f;
     --purple-hover: rgb(167, 41, 245, 0.7);
     --green:#26d782
     --red:#ee5454;
@@ -29,6 +31,7 @@
 }
 body.escuro{
     --bg-color: #313e51;
+    --color-sppan: #313e51;
     
     --prymary-text-color: #fff;
     --shadow: 0px 16px 40px 0px rgba(49, 62, 81, 0.14);
@@ -204,12 +207,12 @@ main{
     display: block;
     width: 40px;
     height: 40px;
-    background: var(--bg-color);
+    background: var(--bg-span);
     display: flex;
     align-items:center ;
     justify-content: center;
     border-radius: 5px;
-    color: var(--secundary-text-color);
+    color: var(--color-span);
     flex-shrink: 0;
 }
 .alternativa button{
