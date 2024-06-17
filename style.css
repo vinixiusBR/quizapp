@@ -133,6 +133,7 @@ main{
     font-size: 10px;
     font-weight: 500;
     color: var(--prymary-text-color);
+    cursor: pointer;
 
 }
 
