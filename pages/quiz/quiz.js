@@ -9,6 +9,7 @@ let pontos = 0
 let pergunta = 1
 let resposta = ""
 let idInputResposta = ""
+let respostaCorretaID = ""
 
 botaoTema.addEventListener("click", () => {
     trocarTema(body, botaoTema)
@@ -74,7 +75,7 @@ function montarPergunta() {
 
                 <form action="">
                     
-                    <label for="alternativa_a>
+                    <label for="alternativa_a">
                     <input type="radio" id= "alternativa_a" name="alternativa" value="${quiz.questions[pergunta-1].options[0]}">
 
                     <div>
@@ -135,6 +136,19 @@ function guardarResposta(evento){
     resposta = evento.target.value
     idInputResposta = evento.target.id
 
+    const botaoEnviar = document.querySelector(".altenativas button")
+    botaoEnviar.addEventListener("click", validarResposta)
+}
+function validarResposta(){
+
+    if (resposta === quiz.questions[pergunta-1].answer) {
+        document.querySelector(`label[for='${idInputResposta}']`).setAttribute("id", "correta")
+        pontos = pontos +1
+        console.log(validarResposta)
+    } else {
+        document.querySelector(`label[for='${idInputResposta}']`).setAttribute("id", "errada")
+        document.querySelector(`label[for='${respostaCorretaID}']`).setAttribute("id", "correta")
+    }
 
 }
 
@@ -147,6 +161,11 @@ async function iniciar(){
     const inputsResposta = document.querySelectorAll(".alternativas input")
     inputsResposta.forEach(input => {
         input.addEventListener("click", guardarResposta)
+        if (input.value === quiz.questions[pergunta-1].answer){
+            respostaCorretaID = input.id
+
+
+        }
 
     })
 }
